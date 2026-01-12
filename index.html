@@ -1,11 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link de bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!--link de mi css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tiempo para mi!</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Logo + Navegación -->
+
+      <div class="logo">
+        <img src="img/logo.png" alt="logo del sitio" />
+      </div>
+
+      <!--etiqueta para el menu-->
+
+      <nav class="navbar navbar-expand-md nav-container">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler boton-background"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto ul-nav-container">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/sobre-mi.html">Sobre mi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="pages/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- barra de redes y contacto -->
+
+    <div class="franja-violeta">
+      <div class="franja-contenido">
+        <!-- redes sociales -->
+        <div class="redes">
+          <!-- etiqueta para enlace a instagram -->
+          <a
+            href="https://www.instagram.com/tiempo.para_mi_lr?igsh=a3RqdnZyNzQ4NHUx"
+            target="_blank"
+          >
+            <img src="img/ig.png" alt="instagram" />
+          </a>
+          <!--enlace para facebook-->
+          <a href="https://www.facebook.com/share/16cpNZn948/" target="_blank">
+            <img src="img/facebook.png" alt="facebook" />
+          </a>
+          <!--enlace para whatsapp-->
+          <a href="https://wa.me/qr/CRHJOK3PVB6WG1" target="_blank">
+            <img src="img/wsp.png" alt="whatsapp" />
+          </a>
+        </div>
+
+        <!--telefono-->
+        <div class="telefono">
+          <img src="img/tel.png" alt="telefono" />
+          <a href="tel:+549 3804303420"> +549 3804303420 </a>
+        </div>
+      </div>
+    </div>
+
+    <!--===== contenido principal =====-->
+    <main>     
+
+      <!-- portada home -->
+      <section class="portada">
+        <h1>Masajes y Terapéuticos</h1>
+      </section>
+
+      <!-- presentacion -->
+      <section class="presentacion">
+        <h2 class="titulo-portada">Tu bienestar en nuestras manos</h2>
+        <p class="subtitulo">
+          Apto para todas las edades y actividades cotidianas
+        </p>
+      </section>
+
+      <!-- seccion informativa -->
+      <section class="masoterapia">
+        <h2>¿Qué es Masoterapia?</h2>
+
+        <p>
+          La masoterapia es una técnica integrada en la fisioterapia que
+          consiste en el uso de distintas técnicas de masaje con fines
+          terapéuticos.
+        </p>
+
+        <p>
+          La masoterapia se basa en el tratamiento manual aplicado sobre el
+          cuerpo, transmitido por la presión de las manos en los distintos
+          órganos. Sus beneficios incluyen mejorar la circulación sanguínea,
+          liberar endorfinas, reducir el estrés y aliviar dolores musculares.
+        </p>
+      </section>
+
+      <!-- tarjetas destacadas -->
+      <section class="tarjetas">
+        <div class="tarjeta">
+          <img src="img/terapeuta exp.jpg" alt="masajes en cabeza" />
+          <h4>Terapeuta experimentada</h4>
+          <p>
+            Masoterapeuta acreditada por entidades educativas de trayectoria
+            internacional.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <img src="img/aceite en espalda.jpg" alt="aceite en espalda" />
+          <h4>Atmósfera relajante</h4>
+          <p>
+            Ambiente especialmente pensado para lograr una experiencia
+            verdaderamente única.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <img src="img/productos.jpg" alt="productos" />
+          <h4>Productos 100% Hipoalergénicos</h4>
+          <p>
+            Seleccionamos productos certificados y avalados para cuidar al
+            máximo tu bienestar.
+          </p>
+        </div>
+      </section>
+
+      <!-- beneficios -->
+
+      <section class="beneficios-detallados">
+        <h1>¿Cuáles son los beneficios de la Masoterapia?</h1>
+        <ol>
+          <li>
+            <strong>Relajación muscular:</strong> El masaje ayuda a liberar la
+            tensión acumulada en los músculos, aliviando dolores y mejorando la
+            flexibilidad.
+          </li>
+          <li>
+            <strong>Mejora de la circulación sanguínea:</strong> Los movimientos
+            del masaje estimulan el flujo sanguíneo, lo que puede contribuir a
+            una mejor oxigenación de los tejidos y eliminar toxinas.
+          </li>
+          <li>
+            <strong>Reducción del estrés y la ansiedad:</strong> El contacto
+            físico y la relajación inducida por el masaje ayudan a reducir los
+            niveles de cortisol y promueven una sensación de calma.
+          </li>
+          <li>
+            <strong>Alivio del dolor:</strong> La masoterapia puede ser
+            beneficiosa para personas con dolores crónicos, como los causados
+            por la artritis o la fibromialgia.
+          </li>
+          <li>
+            <strong>Mejora del sistema inmunológico:</strong> Se ha observado
+            que el masaje regular puede aumentar la actividad de las células
+            inmunitarias.
+          </li>
+          <li>
+            <strong>Mejora del sueño:</strong> El masaje relajante puede ayudar
+            a conciliar el sueño y mejorar su calidad.
+          </li>
+          <li>
+            <strong>Liberación de endorfinas:</strong> Durante el masaje, se
+            liberan endorfinas, lo que contribuye a una sensación de bienestar
+            general.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!--===== pie de pagina =====-->
+    <footer class="footer">
+      <!-- Frase superior -->
+      <div class="footer-frase">
+        <h3>¡Estás a un click de tu mejor descanso!</h3>
+      </div>
+
+      <!-- Contenido en 3 columnas -->
+      <div class="footer-contenedor">
+        <!-- Ubicación -->
+        <div class="footer-col">
+          <h4>Ubicación</h4>
+
+          <a
+            href="https://www.google.com/maps/place/Tiempo+Para+M%C3%AD/@-29.4305083,-66.8483609,17.75z/data=!4m6!3m5!1s0x9427db007d783e95:0xec95ef967c9192ca!8m2!3d-29.4295324!4d-66.8476471!16s%2Fg%2F11ms2h2k6l?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            aria-label="Ver ubicación en Google Maps"
+          >
+            <img src="img/ubi.png" alt="Ubicación" class="footer-icon" />
+          </a>
+
+          <p>Ejército Argentino 1390<br />La Rioja, Argentina</p>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-item footer-telefono">
+            <img src="img/tel.png" alt="Teléfono" class="footer-icon" />
+            <a href="tel:+5493804303420">+54 9 380 430 3420</a>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-col">
+          <h4>Redes Sociales</h4>
+          <div class="footer-redes">
+            <a href="https://wa.me/qr/CRHJOK3PVB6WG1" target="_blank">
+              <img src="img/wsp.png" alt="WhatsApp" />
+            </a>
+            <a
+              href="https://www.facebook.com/share/16cpNZn948/"
+              target="_blank"
+            >
+              <img src="img/facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com/tiempo.para_mi_lr?igsh=a3RqdnZyNzQ4NHUx"
+              target="_blank"
+            >
+              <img src="img/ig.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="footer-bottom">
+        <p>© 2026 · Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- =====scripts bootsrap =====-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
