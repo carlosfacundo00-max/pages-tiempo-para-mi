@@ -1,23 +1,23 @@
 /* reseteo general */
 
 * {
-  margin: 0; /* elimina margenes por defecto */
-  padding: 0; /* elimina rellenos por defecto */
-  box-sizing: border-box; /* incluye padding y borde en with/height */
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
 
 /* ===== estilos generales ===== */
 
 /* ===== estilos de body ===== */
 body {
-  background-image: url(../img/fondo.jpg); /* imagen de fondo */
-  background-size: cover; /* imagen de fondo cubre completamente el área, sin dejar espacios vacíos */
-  background-position: center; /* centra la imagen de fondo */
-  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita en mosaico */
-  background-attachment: fixed; /* fija la imagen de fondo */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* tipografia general */
-  color: #9c5b7b; /* color base */
-  min-height: 100vh; /* Garantiza que el fondo cubra toda la pantalla aunque haya poco contenido */
+  background-image: url(../img/fondo.jpg); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; 
+  color: #9c5b7b; 
+  min-height: 100vh; 
 }
 
 /* Encabezados y párrafos */
@@ -25,16 +25,16 @@ h1,
 h2,
 h3,
 h4 {
-  margin-bottom: 15px; /* agrega espacio debajo de los títulos - evita que el texto quede pegado */
+  margin-bottom: 15px; 
 }
 
 h1,
 h2 {
-  line-height: 1.25; /* Controla la separación entre líneas dentro del título */
+  line-height: 1.25; 
 }
 
 p {
-  line-height: 1.7; /* Altura de línea en párrafos */
+  line-height: 1.7; 
 }
 
 /* ===== estilos de header =====*/
@@ -42,66 +42,68 @@ p {
 /* general */
 header {
   display: flex; /* layout flexible */
-  justify-content: space-between; /* separa elementos */
-  align-items: center; /* centra elementos en sentido vertical */
-  padding: 20px 50px; /* Agrega espacio interno: -20px arriba y abajo - 50px izquierda y derecha */
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 50px; 
   background-color: rgba(
     255,
     255,
     255,
     0.2
-  ); /* Fondo translúcido - Blanco con transparencia */
+  ); 
   backdrop-filter: blur(
     8px
-  ); /* Desenfoque del fondo - Difumina lo que está detrás del elemento */
+  ); 
   -webkit-backdrop-filter: blur(
     8px
-  ); /* Desenfoque del fondo - Difumina lo que está detrás del elemento */
-  border-radius: 10px; /* Bordes redondeados - Esquinas suaves  */
-  position: relative; /* Posicionamiento relativo - Permite: -usar pseudo-elementos (::before, ::after) -controlar correctamente el z-index */
-  z-index: 10; /* Eleva el elemento por encima de otros */
+  ); 
+  border-radius: 10px; 
+  position: relative; 
+  z-index: 10; 
 }
 
 /* logo */
 .logo {
-  margin-left: 50px; /* separación desde el borde */
-  display: flex; /* permite alineación */
-  align-items: center; /* centra verticalmente */
+  margin-left: 50px; 
+  display: flex; 
+  align-items: center; 
 }
 
 header img {
-  width: 50%; /* tamaño del logo */
+  width: 50%; 
 }
+
+
 
 /* menu */
 header nav ul {
-  display: flex; /* menú en fila */
-  list-style: none; /* quita viñetas */
-  gap: 60px; /* espacio entre links */
+  display: flex; 
+  list-style: none; 
+  gap: 60px; 
 }
 
 header nav ul li a {
-  text-decoration: none; /* quitar las decoraciones del texto */
-  color: #ca4c99; /* color de textos ubicados en "a" */
-  font-weight: 600; /* ancho maximo del texto */
+  text-decoration: none; 
+  color: #ca4c99; 
+  font-weight: 600; 
 }
 
 /* menú normal - desktop y tablet */
 .navbar .navbar-nav .nav-link {
-  font-weight: 600; /* más peso */
-  color: #9c5b7b; /* claro / rosado */
-  letter-spacing: 0.5px; /* opcional, se ve más fino */
+  font-weight: 600; 
+  color: #9c5b7b; 
+  letter-spacing: 0.5px; 
 }
 
 /* menu clickeable */
 header nav ul li a {
-  position: relative; /* referencia para ::after -(SIN esto, la línea no se ubica correctamente). */
-  padding-bottom: 5px; /* espacio entre texto y subrayado */
-  transition: color 0.3s ease; /* transición suave */
+  position: relative; 
+  padding-bottom: 5px; 
+  transition: color 0.3s ease; 
 }
 
 header nav ul li a:hover {
-  color: #8d4b6f; /* cambia color al pasar el mouse */
+  color: #8d4b6f; 
 }
 
 .navbar .navbar-nav .nav-link:hover {
@@ -110,114 +112,115 @@ header nav ul li a:hover {
 
 /* subrayado animado */
 header nav ul li a::after {
-  /* ::after crea un elemento falso, ideal para líneas decorativas */
-  content: ""; /* crea línea - Obligatorio para que el pseudo-elemento exista */
-  position: absolute; /* Permite ubicar la línea exactamente donde queremos */
-  left: 0; /* Posiciona la línea: desde la izquierda */
-  bottom: 0; /* Posiciona la línea: pegada abajo del texto */
-  width: 0%; /* inicia oculto - La línea empieza invisible */
-  height: 2px; /* Grosor del subrayado */
-  background-color: #8d4b6f; /* color de linea */
-  transition: width 0.3s ease; /* Hace que la línea se dibuje suavemente. */
+  
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  bottom: 0; 
+  width: 0%; 
+  height: 2px; 
+  background-color: #8d4b6f; 
+  transition: width 0.3s ease; 
 }
 
 /* efecto de linea */
 header nav ul li a:hover::after {
-  width: 100%; /* se extiende al hover - Al hacer hover: la línea se expande de 0% a 100% con efecto moderno y profesional*/
+  width: 100%;  
 }
 
 /* Cursor tipo enlace */
 header nav ul li a {
-  cursor: pointer; /* Cursor tipo enlace */
+  cursor: pointer; 
 }
 
 /* Accesibilidad: foco con teclado */
 header nav ul li a:focus-visible {
-  /* Aplica solo cuando el enlace recibe foco mediante teclado */
-  outline: 2px solid #8d4b6f; /* Dibuja un borde alrededor del enlace enfocado */
-  outline-offset: 4px; /* Separa el contorno del elemento */
+  
+  outline: 2px solid #8d4b6f; 
+  outline-offset: 4px; 
 }
 
 /* ===== franja violeta redes y contacto =====*/
 .franja-violeta {
-  /* Crea una franja horizontal que ocupa todo el ancho de la pantalla */
-  width: 100%; /* La franja se estira de lado a lado. */
-  height: 40px; /* Altura fija de la barra superior. */
+  
+  width: 100%; 
+  height: 40px; 
   background-color: rgba(
     141,
     75,
     111,
     0.8
-  ); /* color con transparencia de la franja */
-  backdrop-filter: blur(
-    4px
-  ); /* Desenfoca lo que está detrás del elemento, no el elemento en sí */
+  ); 
+  backdrop-filter: blur( 4px); 
 }
 
+/* contenido general en franja violeta */
 .franja-contenido {
-  /* Contenedor interno que organiza redes y teléfono */
-  display: flex; /* Activa Flexbox */
-  justify-content: space-between; /* redes a un lado, teléfono al otro */
-  align-items: center; /* Centra verticalmente los elementos */
-  height: 100%; /* Hereda los 40px de la franja */
-  padding-right: 6%; /* El contenido se separa del borde derecho */
+  
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 100%; 
+  padding-right: 6%; 
 }
 
+/* redes en franja violeta */
 .redes {
-  /* Contenedor de íconos sociales */
-  display: flex; /* Activa Flexbox - Íconos en línea */
-  gap: 50px; /* Espacio uniforme entre cada ícono */
-  align-items: center; /* Centra verticalmente los elementos */
+  
+  display: flex; 
+  gap: 50px; 
+  align-items: center; 
 }
 
+/* imagenes en franja violeta */
 .franja-violeta img {
-  /* Aplica solo a imágenes dentro de la franja */
-  width: 28px; /* Tamaño uniforme */
-  height: 28px; /* Tamaño uniforme */
-  cursor: pointer; /* Indica que son clickeables */
-  display: block; /* Convierte un elemento en elemento de bloque */
+  
+  width: 28px; 
+  height: 28px; 
+  cursor: pointer; 
+  display: block; 
 }
 
 /* telefono */
 .telefono {
   /* Agrupa ícono + número */
-  display: flex; /* Ícono y texto alineados verticalmente */
-  align-items: center; /* Ícono y texto alineados verticalmente */
-  gap: 10px; /* Separación cómoda entre ícono y número */
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
 }
 
 .telefono a {
   /* Enlace del teléfono */
-  color: #ffffff; /* Blanco para buen contraste */
-  text-decoration: none; /* Quita subrayado del enlace */
-  font-weight: 600; /* Texto semi-negrita para jerarquía visual */
-  font-size: 14px; /* altura de letra */
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 14px; 
 }
 
 /* ===== interaccion y clickeabilidad ===== */
 
 /* Quitar estilos de link y hacerlos flex */
 .redes a {
-  /*Hace que el <a>: -envuelva correctamente al ícono - tenga área clickeable limpia - permita centrar el contenido */
+  
   display: flex;
   align-items: center;
 }
 
 /* Hover para íconos de redes */
 .redes a:hover img {
-  transform: scale(1.15); /* el ícono crece levemente */
-  opacity: 0.85; /* baja un poco la opacidad */
+  transform: scale(1.15); 
+  opacity: 0.85; 
 }
 
 /* Transición suave */
 .franja-violeta img {
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Aplica la animación de forma suave */
-  cursor: pointer; /* refuerza clickeabilidad */
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  cursor: pointer; 
 }
 
 /* Teléfono clickeable con feedback */
 .telefono a:hover {
-  text-decoration: underline; /* Al pasar el mouse: usuario entiende que puede llamar */
+  text-decoration: underline; 
 }
 
 /* Accesibilidad: foco visible con teclado */
@@ -232,6 +235,9 @@ header nav ul li a:focus-visible {
 .franja-contenido {
   padding-left: 90px; /* coincide visualmente con el logo */
 }
+
+
+
 
 /* ===== estilos de main ===== */
 
@@ -249,68 +255,73 @@ main {
   -webkit-backdrop-filter: blur(
     6px
   ); /* Difumina lo que está detrás del <main> - 6px = desenfoque equilibrado */
-  padding: 20px 40px; /* Espaciado interno: 20px arriba / abajo - 40px izquierda / derecha */
-  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px 40px; 
+  margin: 0 auto; 
   border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
 }
 
 /*===== portada inicio =====*/
 .portada {
-  height: 400px; /* Altura fija - Define una altura visible clara para la portada */
-  background-image: url("../img/portada.jpg"); /* Coloca la imagen de portada */
+  height: 400px; 
+  background-image: url("../img/portada.jpg"); 
   background-size: cover; /* La imagen cubre toda la portada sin deformarse */
   background-position: center; /* Mantiene el foco centrado */
-  display: flex; /* Permite posicionar texto o botones dentro de la portada */
-  align-items: flex-start; /* Contenido alineado: arriba */
-  justify-content: flex-start; /* Contenido alineado: a la izquierda */
-  padding: 30px; /* Separa el contenido del borde */
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  padding: 30px; 
   border-radius: 15px; /* Bordes redondeados - Esquinas suaves*/
 }
 
+/* en portada – texto sobre imagen */
 .portada h1 {
-  /* en portada – texto sobre imagen */
+  
   background-color: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
   backdrop-filter: blur(
     4px
   ); /* Desenfoque del fondo - Difumina lo que está detrás del texto */
-  padding: 10px 20px; /* Espaciado interno - Hace que el texto no quede pegado al borde */
+  padding: 10px 20px; 
   border-radius: 5px; /* Bordes redondeados - Esquinas suaves */
-  font-size: 38px; /* Tamaño del texto - Título fuerte y visible */
-  font-weight: 200; /* Peso tipográfico - Tipografía liviana */
-  letter-spacing: 1.5px; /* Espaciado entre letras - Da aire al texto */
+  font-size: 38px; 
+  font-weight: 200; 
+  letter-spacing: 1.5px; 
 }
 
 /*===== presentacion =====*/
 .presentacion {
-  /* Selector - Aplica estilos a la sección de presentación */
-  text-align: center; /* Centra todo el contenido de texto */
-  padding: 20px 20px 30px; /* Espaciado interno - 20px arriba ; 20px izquierda y derecha ; 30px abajo (más aire antes de la siguiente sección) */
-  line-height: 1.5; /* Altura de línea - Mejora la legibilidad del texto */
+  
+  text-align: center; 
+  padding: 20px 20px 30px; 
+  line-height: 1.5; 
 }
 
+/* estilos al titulo de portada*/
 .titulo-portada {
-  /* Selector - Aplica estilos al titulo de portada*/
-  font-size: 40px; /* tamaño de texto - Impactante */
-  font-weight: 200; /* Peso - Muy liviano, estilo elegante y moderno */
-  margin-bottom: 5px; /* Separación inferior - Evita que queden “pegados” */
-  letter-spacing: 1.5px; /* Espaciado entre letras - Da aire */
+  
+  font-size: 40px; 
+  font-weight: 200; 
+  margin-bottom: 5px; 
+  letter-spacing: 1.5px; 
 }
 
+/* estilos al subtitulo de portada */
 .subtitulo-portada {
-  /* Selector - Aplica estilos al subtitulo de portada */
-  font-size: 32px; /* La mitad del título (relación correcta) */
-  font-weight: 200; /* Peso - Coherente con el título */
-  line-height: 1.4; /* Altura de línea - Ideal para frases de 2 líneas */
+  
+  font-size: 32px; 
+  font-weight: 200; 
+  line-height: 1.4; 
 }
+
 
 /*===== masoterapia =====*/
 
+/*  estilos para seccion masoterapia */
 .masoterapia {
-  /* selector- aplica estilos para seccion masoterapia */
-  max-width: 800px; /* Ancho máximo - Limita el ancho para facilitar la lectura */
-  margin: 0 auto; /* Centrado horizontal - Centra la sección en la página */
-  padding: 40px 20px; /* Espaciado interno - 40px arriba y abajo ; 20px laterales */
-  text-align: center; /* Alineación de texto - Centra todo el contenido textual */
+  
+  max-width: 800px; 
+  margin: 0 auto; /
+  padding: 40px 20px; 
+  text-align: center; 
   background-color: rgba(
     255,
     255,
@@ -324,172 +335,183 @@ main {
 }
 
 /* ===== tarjetas =====*/
+/* sección de tarjetas responsive */
 .tarjetas {
-  /* sección de tarjetas responsive */
-  display: flex; /* Convierte a .tarjetas en contenedor flex - Las tarjetas se alinean en fila*/
-  gap: 30px; /* Espacio uniforme entre tarjetas */
-  padding: 25px 15px; /* Espaciado interno - 25px arriba y abajo ; 15px laterales */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila - Clave para responsive */
+  
+  display: flex; 
+  gap: 30px; 
+  padding: 25px 15px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
 }
 
+/* define cada tarjeta individual */
 .tarjeta {
-  /*Este bloque define cada tarjeta individual */
-  width: 280px; /* Ancho fijo - Cada tarjeta tiene tamaño uniforme */
-  text-align: center; /* Alineación del texto - Centra todo el contenido dentro de la tarjeta */
+  
+  width: 280px; 
+  text-align: center; 
   background-color: rgba(
     255,
     255,
     255,
     0.5
-  ); /* Fondo translúcido - Efecto glassmorphism: semi-transparente */
+  ); 
   backdrop-filter: blur(
     6px
-  ); /* Desenfoque del fondo - Difumina lo que hay detrás del bloque */
-  border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
-  padding: 15px; /* Espaciado interno - Evita que textos e imágenes “toquen” los bordes */
+  ); 
+  border-radius: 15px; 
+  padding: 15px; 
 }
 
+/* cada imagen dentro de su tarjeta individual */
 .tarjeta img {
-  /*Este bloque define cada imagen dentro de su tarjeta individual */
-
-  width: 100%; /*La imagen ocupa todo el ancho de la tarjeta */
-  border-radius: 5px; /*Suaviza las esquinas de la imagen para que combine con la tarjeta */
-  margin-bottom: 15px; /*Crea espacio entre la imagen y el texto */
+  
+  width: 100%; 
+  border-radius: 5px; 
+  margin-bottom: 15px; 
 }
 
+/*texto de las tarjetas */
 .tarjeta p {
-  /*texto de las tarjetas */
-  line-height: 1.6; /*Evita que el texto se vea “apretado” */
+  
+  line-height: 1.6; 
 }
 
-/* ===== beneficios =====*/
+
+/*seccion de beneficios */
 .beneficios-detallados {
-  /*seccion de beneficios */
+  
   background-color: rgba(255, 255, 255, 0.5); /*fondo translucido */
   backdrop-filter: blur(
     6px
   ); /* Desenfoque del fondo - Difumina lo que hay detrás del bloque */
-  border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
-  padding: 60px 20px; /* Espaciado interno - 60px arriba y abajo ; 20px laterales */
-  max-width: 900px; /* Ancho máximo - Limita el ancho para facilitar la lectura */
-  margin: 0 auto 50px; /*contenido centrado - Separación del footer */
-  text-align: left; /*Texto alineado a la izquierda - mejor lectura para listas largas */
+  border-radius: 15px; 
+  padding: 60px 20px; 
+  max-width: 900px; 
+  margin: 0 auto 50px; 
+  text-align: left; 
 }
 
+/*titulo de la seccion beneficios */
 .beneficios-detallados h2 {
-  /*titulo de la seccion beneficios */
-  text-align: center; /* Alineación del texto - Centra todo el contenido dentro de la seccion */
-  font-size: 36px; /* altura de letra del título */
-  font-weight: 600; /* Peso del título */
-  margin-bottom: 40px; /*Agrega 40 píxeles de espacio por fuera, debajo del elemento */
-  color: #8d4b6f; /*color de texto */
+  
+  text-align: center; 
+  font-size: 36px; 
+  font-weight: 600; 
+  margin-bottom: 40px; 
+  color: #8d4b6f; 
 }
 
+/*enumeracion de beneficios */
 .beneficios-detallados ol {
-  /*enumeracion de beneficios */
-  padding-left: 20px; /*Deja espacio a la izquierda para los números */
-  line-height: 1.8; /* separación vertical de texto 1.8 */
+  
+  padding-left: 20px; 
+  line-height: 1.8; 
 }
 
+/* items de la lista */
 .beneficios-detallados li {
-  /* items de la lista */
-  margin-bottom: 20px; /* aire entre items */
-  font-size: 18px; /*altura de letra de items */
-  color: #8d4b6f; /* color de texto */
+  
+  margin-bottom: 20px; 
+  font-size: 18px; 
+  color: #8d4b6f; 
 }
+
+
 
 /*===== estilos de footer =====*/
 
 /*===== generales =====*/
 .footer {
-  /* estructura general del footer */
-  background-color: #8d4b6f; /* Define el color de fondo del footer - color violeta */
-  color: #f5eaf1; /* Define el color del texto dentro del footer */
-  padding: 50px 20px 20px; /* Espacio interno entre el contenido y los bordes del footer: 50px arriba - 20px izquierda y derecha - 20px abajo */
+  
+  background-color: #8d4b6f; 
+  color: #f5eaf1; 
+  padding: 50px 20px 20px;  
 }
 
-/*===== frase superior =====*/
+/* frase titulo del footer */
 .footer-frase {
-  /* frase titulo del footer */
-  text-align: center; /* Centra el texto */
-  margin-bottom: 40px; /*Agrega 40 píxeles de espacio por fuera, debajo del elemento */
+  
+  text-align: center; 
+  margin-bottom: 40px; 
 }
 
+/* especificidad para frase titulo de footer */
 .footer-frase h3 {
-  /* especificidad para frase titulo de footer */
-  font-size: 26px; /*altura de letra */
-  font-weight: 600; /* Peso del título */
+  
+  font-size: 26px; 
+  font-weight: 600; 
 }
 
-/*===== contenedor de tres columnas =====*/
+/* organizacion de columnas - grid */
 .footer-contenedor {
-  /* selector de clase - organizacion de columnas */
-  max-width: 1100px; /* Define el ancho máximo del contenedor */
-  margin: 0 auto; /* Centra horizontalmente el contenedor - 0 → sin margen arriba y abajo - auto → el navegador reparte el espacio a izquierda y derecha */
-  display: grid; /* Convierte el contenedor en una grilla CSS Grid: Los hijos pasan a ser items de la grilla - Permite crear columnas y filas fácilmente - Ideal para layouts estructurales como footers */
+  
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: grid; 
   grid-template-columns: repeat(
     3,
     1fr
   ); /* Define 3 columnas iguales: repeat(3, ...) → crear 3 columnas - 1fr → cada columna ocupa una fracción del espacio disponible */
   gap: 40px; /* Espacio entre columnas */
-  text-align: center; /* Centra el texto y elementos inline dentro de cada columna */
+  text-align: center; 
 }
 
-/*===== columnas =====*/
+/*===== columnas */
+/* estilos a todos los <h4> dentro clase footer-col */
 .footer-col h4 {
-  /* Aplica los siguientes estilos a todos los <h4> que estén dentro del elemento con clase footer-col */
-  margin-bottom: 15px; /*Agrega 15 píxeles de espacio por fuera, debajo del elemento */
-  font-size: 20px; /*altura de letra 20px*/
-  color: #f5eaf1; /* Define el color del texto */
+  margin-bottom: 15px; 
+  font-size: 20px; 
+  color: #f5eaf1; 
 }
 
+/* estilos a todos los <p> dentro clase footer-col */
 .footer-col p {
-  /* Aplica los siguientes estilos a todos los <p> que estén dentro del elemento con clase footer-col */
-  font-size: 16px; /*altura de letra 16px*/
-  line-height: 1.6; /* separación vertical de texto 1.6 */
+  font-size: 16px; 
+  line-height: 1.6; 
 }
 
-/*===== efecto sobre imagenes en columnas de footer =====*/
+
+/* efecto sobre imagenes en columnas de footer */
 .footer-col a img {
-  transition: transform 0.3s ease, opacity 0.3s ease; /* define cómo se animan los cambios cuando otra propiedad CSS cambia (por ejemplo en :hover)*/
-  /* transform	Anima cambios de escala, rotación, desplazamiento -opacity	Anima cambios de transparencia -0.3s	Duración de la animación (300 ms) -ease	Movimiento suave (empieza lento, acelera, termina lento) */
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  
 }
 
+/* :hover sobre una img dentro de un enlace (a) dentro de .footer-col */
 .footer-col a img:hover {
-  /*Cuando el usuario pasa el mouse (:hover) sobre una imagen (img) que está dentro de un enlace (a) que está dentro de .footer-col */
   transform: scale(
     1.15
-  ); /* Aumenta el tamaño del ícono un 15% - El elemento crece desde su centro - No empuja otros elementos (no rompe el layout) */
-  opacity: 0.85; /* Reduce la opacidad al 85% - Da un efecto visual suave - Refuerza la sensación de interacción */
+  ); /* Aumenta el tamaño del ícono un 15% - 
+  opacity: 0.85; /* refuerza la sensación de interacción */
 }
 
 /* iconos */
 .footer-icon {
-  width: 30px; /* Define el ancho del ícono en 30px. (no se deforma). */
-  margin-bottom: 10px; /* Agrega 10px de espacio externo debajo del ícono. Se usa para separar visualmente el ícono del texto que aparece debajo (dirección, teléfono, etc.). */
+  width: 30px; 
+  margin-bottom: 10px;  
 }
 
 /* contacto */
 .footer-item {
-  display: flex; /* Convierte el contenedor en un contenedor Flexbox. Permite alinear fácilmente los elementos hijos (por ejemplo: ícono + texto) en una misma línea. */
-  align-items: center; /* Alinea los elementos hijos en el eje vertical. Hace que el ícono y el texto queden perfectamente centrados en altura. */
-  justify-content: center; /* Centra los elementos hijos en el eje horizontal. Evita que el conjunto quede desfasado hacia la izquierda o la derecha dentro de la columna. */
-  gap: 10px; /* Define un espacio fijo de 10px entre los elementos hijos */
-  text-align: center; /* Centra el texto dentro del contenedor. Útil cuando el texto puede ocupar más de una línea o cuando se adapta en responsive. */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+  text-align: center;  
 }
 
 /* telefono */
 .footer-telefono a {
-  color: #ffffff; /* Define el color del texto del enlace. Se usa blanco para lograr buen contraste sobre el fondo violeta del footer. */
-  text-decoration: none; /* Elimina el subrayado por defecto de los enlaces. Hace que el número de teléfono se vea más limpio y alineado con el estilo visual del sitio. */
-  font-weight: 600; /* Aplica un peso de fuente semi-negrita. Da mayor jerarquía visual al número y mejora la legibilidad. */
-  font-size: 16px; /* Define el tamaño del texto. Mantiene coherencia con otros textos importantes como el teléfono de la franja violeta. */
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 16px; 
 }
 
-/* Hover coherente */
+/* subrayado cuando el usuario pasa el mouse sobre el número de teléfono */
 .footer-telefono a:hover {
-  text-decoration: underline; /* Aplica un subrayado cuando el usuario pasa el mouse sobre el número de teléfono */
+  text-decoration: underline; 
 }
 
 /* Accesibilidad */
@@ -500,41 +522,43 @@ main {
 
 /* redes */
 .footer-redes {
-  display: flex; /* Convierte el contenedor en un Flexbox. Permite alinear los íconos de redes en una fila de forma simple y controlada */
-  justify-content: center; /* Centra horizontalmente los íconos dentro del footer. Todos los elementos se agrupan en el centro */
-  gap: 20px; /* Define un espacio uniforme de 20px entre cada ícono. */
+  display: flex; 
+  justify-content: center;  
+  gap: 20px; 
 }
 
 .footer-redes img {
-  width: 36px; /* Define el tamaño del ícono de red social. Todos los íconos quedan del mismo ancho, manteniendo coherencia visual */
-  transition: transform 0.3s ease; /* Aplica una transición suave cuando cambia la propiedad transform (por ejemplo en hover).- 0.3s → duración de la animación - ease → inicio y fin suaves, más natural */
+  width: 36px; 
+  transition: transform 0.3s ease; 
 }
 
 .footer-redes img:hover {
   transform: scale(
     1.15
-  ); /* Al pasar el mouse sobre el ícono: - scale(1.15) aumenta su tamaño un 15% - El crecimiento se hace desde el centro - No empuja otros elementos (no rompe el layout)- Refuerza visualmente que el ícono es clickeable */
+  ); /* Al pasar el mouse sobre el ícono: - scale(1.15) aumenta su tamaño un 15% - clickeable */
 }
 
 /* pie inferior */
 .footer-bottom {
-  margin-top: 40px; /* Espacio exterior superior: - Separa visualmente el pie inferior - Crea aire entre las columnas del footer - Evita que el texto quede “pegado” */
-  padding-top: 15px; /* Espacio interior superior: - Aleja el texto de la línea divisoria - Mejora la legibilidad */
-  border-top: 1px solid rgba(245, 234, 241, 0.4); /* Línea superior divisoria:- 1px: grosor fino y elegante - solid: línea continua - rgba(..., 0.4): color claro con transparencia - Separa visualmente el contenido principal del copyright */
-  text-align: center; /* Centra horizontalmente el texto del copyright */
-  font-size: 14px; /* Tamaño de letra más pequeño: - Jerarquía visual baja - Ideal para textos legales o informativos */
+  margin-top: 40px; 
+  padding-top: 15px; 
+  border-top: 1px solid rgba(245, 234, 241, 0.4); 
+  text-align: center; 
+  font-size: 14px; 
 }
+
+
 
 /* ===== responsive general ===== */
 @media (max-width: 768px) {
-  /* Media Query: - Se aplica cuando el ancho de pantalla es de 768px o menor - Abarca tablets y celulares grandes - Permite adaptar el diseño a pantallas más chicas */
+  /* Media Query: - Se aplica cuando el ancho de pantalla es de 768px o menor */
 
   /* ===== header ===== */
   header {
-    flex-direction: row; /* Mantiene los elementos en fila (logo + menú) */
-    align-items: center; /* Centra verticalmente los elementos del header */
-    justify-content: space-between; /* Logo a la izquierda y menú a la derecha */
-    padding: 15px 20px; /* Espaciado interno cómodo para pantallas pequeñas */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px 20px; /
   }
 
   .logo {
@@ -583,6 +607,8 @@ main {
     font-size: 14px; /* Texto más chico para mobile/tablet */
   }
 
+
+
   /* ===== footer ===== */
   .footer-contenedor {
     grid-template-columns: 1fr; /* Una sola columna (layout vertical) */
@@ -590,9 +616,10 @@ main {
   }
 }
 
+
 /* Móviles chicos */
 @media (max-width: 480px) {
-  /* Media Query: - Se aplica solo en pantallas de 480px o menos - Pensado para celulares pequeños - Ajusta tamaños y espacios para mejorar la legibilidad */
+  /* Media Query: - Se aplica solo en pantallas de 480px o menos */
 
   header img {
     width: 140px; /* Reduce el tamaño del logo para que no domine el header */
@@ -608,7 +635,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  /* Media Query: - Se activa cuando la pantalla mide 768px o menos - Aplica para tablets y celulares - Permite adaptar el diseño a pantallas más angostas */
+  /* Media Query: - Se activa cuando la pantalla mide 768px o menos */
   .footer-contenedor {
     grid-template-columns: 1fr; /* Cambia la grilla del footer a una sola columna: - 1fr = una columna que ocupa todo el ancho - Las 3 columnas del desktop se apilan una debajo de otra - Mejora la legibilidad y el orden en mobile/tablet */
   }
@@ -738,15 +765,15 @@ main {
 
 /*===== titulos y subtitulos - servicios =====*/
 .servicios-titulo {
-  /* frase titulo del main - servicios */
-  text-align: center; /* Centra el texto */
-  margin-bottom: 10px; /*Agrega 10 píxeles de espacio por fuera, debajo del elemento */
+  
+  text-align: center; 
+  margin-bottom: 10px; 
 }
 
 .servicios-titulo h3 {
-  /* especificidad para frase final de main - servicios */
-  font-size: 26px; /*altura de letra */
-  font-weight: 600; /* Peso del título */
+  
+  font-size: 26px; 
+  font-weight: 600; 
 }
 
 /* ===== Ajustes carousel servicios ===== */
@@ -787,7 +814,7 @@ main {
   background-color: rgba(255, 255, 255, 0.65);
 }
 
-/* Flechas */
+/* Flechas de carousel*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(25%);
@@ -797,15 +824,15 @@ main {
 
 /*===== titulos y subtitulos - contacto =====*/
 .contacto-titulo {
-  /* frase titulo del main - servicios */
-  text-align: center; /* Centra el texto */
-  margin-bottom: 10px; /*Agrega 10 píxeles de espacio por fuera, debajo del elemento */
+  
+  text-align: center; 
+  margin-bottom: 10px; 
 }
 
 .contacto-titulo h3 {
-  /* especificidad para frase final de main - servicios */
-  font-size: 26px; /*altura de letra */
-  font-weight: 600; /* Peso del título */
+  
+  font-size: 26px; 
+  font-weight: 600; 
 }
 
 /*===== portada - contacto =====*/
@@ -852,16 +879,16 @@ main {
 /* telefono - contacto */
 .contacto-telefono {
   /* Agrupa ícono + número */
-  align-items: center; /* Ícono y texto alineados verticalmente */
-  gap: 10px; /* Separación cómoda entre ícono y número */
+  align-items: center; 
+  gap: 10px; 
 }
 
 .contacto-telefono a {
   /* Enlace del teléfono */
-  color: #8d4b6f; /* Blanco para buen contraste */
-  text-decoration: none; /* Quita subrayado del enlace */
-  font-weight: 600; /* Texto semi-negrita para jerarquía visual */
-  font-size: 25px; /* altura de letra */
+  color: #8d4b6f; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 25px; 
 }
 
 /* ===== Responsive ===== */
