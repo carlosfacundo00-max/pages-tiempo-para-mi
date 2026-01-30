@@ -1,0 +1,90 @@
+/* =============================== Pages Contacto ============================== */
+
+/*===== titulos y subtitulos - contacto =====*/
+.contacto-titulo {
+  
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.contacto-titulo h3 {
+  
+  font-size: 26px; 
+  font-weight: 600; 
+}
+
+/*===== portada - contacto =====*/
+.portada-contacto {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  margin-bottom: 60px;
+
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 20px;
+}
+
+/* Texto */
+.texto-contacto {
+  flex: 1;
+}
+
+.texto-contacto h1 {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #8d4b6f;
+}
+
+.texto-contacto p {
+  font-size: 25px;
+  line-height: 2.5;
+  color: #8d4b6f;
+  margin-bottom: 15px;
+}
+
+/* Imagen */
+.imagen-contacto img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* telefono - contacto */
+.contacto-telefono {
+  /* Agrupa ícono + número */
+  align-items: center; 
+  gap: 10px; 
+}
+
+.contacto-telefono a {
+  /* Enlace del teléfono */
+  color: #8d4b6f; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 25px; 
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .portada-contacto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagen-contacto img {
+    max-width: 100%;
+  }
+
+  .texto-contacto h1 {
+    font-size: 24px;
+  }
+
+  .texto-contacto p {
+    font-size: 14px;
+  }
+}

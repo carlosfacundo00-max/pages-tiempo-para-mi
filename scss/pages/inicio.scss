@@ -1,0 +1,158 @@
+/* =================================== Pages Inicio ============================== */
+
+/*===== portada inicio =====*/
+.portada {
+  height: 400px; 
+  background-image: url("../img/portada.jpg"); 
+  background-size: cover; /* La imagen cubre toda la portada sin deformarse */
+  background-position: center; /* Mantiene el foco centrado */
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  padding: 30px; 
+  border-radius: 15px; /* Bordes redondeados - Esquinas suaves*/
+}
+
+/* en portada – texto sobre imagen */
+.portada h1 {
+  
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
+  backdrop-filter: blur(
+    4px
+  ); /* Desenfoque del fondo - Difumina lo que está detrás del texto */
+  padding: 10px 20px; 
+  border-radius: 5px; /* Bordes redondeados - Esquinas suaves */
+  font-size: 38px; 
+  font-weight: 200; 
+  letter-spacing: 1.5px; 
+}
+
+/*===== presentacion =====*/
+.presentacion {
+  
+  text-align: center; 
+  padding: 20px 20px 30px; 
+  line-height: 1.5; 
+}
+
+/* estilos al titulo de portada*/
+.titulo-portada {
+  
+  font-size: 40px; 
+  font-weight: 200; 
+  margin-bottom: 5px; 
+  letter-spacing: 1.5px; 
+}
+
+/* estilos al subtitulo de portada */
+.subtitulo-portada {
+  
+  font-size: 32px; 
+  font-weight: 200; 
+  line-height: 1.4; 
+}
+
+
+/*===== masoterapia =====*/
+
+/*  estilos para seccion masoterapia */
+.masoterapia {
+  
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 40px 20px; 
+  text-align: center; 
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Fondo translúcido - Mantiene el fondo visible */
+  backdrop-filter: blur(
+    6px
+  ); /* Desenfoque del fondo - Difumina el fondo detrás del bloque */
+  border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
+}
+
+/* ===== tarjetas =====*/
+/* sección de tarjetas responsive */
+.tarjetas {
+  
+  display: flex; 
+  gap: 30px; 
+  padding: 25px 15px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+/* define cada tarjeta individual */
+.tarjeta {
+  
+  width: 280px; 
+  text-align: center; 
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); 
+  backdrop-filter: blur(
+    6px
+  ); 
+  border-radius: 15px; 
+  padding: 15px; 
+}
+
+/* cada imagen dentro de su tarjeta individual */
+.tarjeta img {
+  
+  width: 100%; 
+  border-radius: 5px; 
+  margin-bottom: 15px; 
+}
+
+/*texto de las tarjetas */
+.tarjeta p {
+  
+  line-height: 1.6; 
+}
+
+
+/*seccion de beneficios */
+.beneficios-detallados {
+  
+  background-color: rgba(255, 255, 255, 0.5); /*fondo translucido */
+  backdrop-filter: blur(
+    6px
+  ); /* Desenfoque del fondo - Difumina lo que hay detrás del bloque */
+  border-radius: 15px; 
+  padding: 60px 20px; 
+  max-width: 900px; 
+  margin: 0 auto 50px; 
+  text-align: left; 
+}
+
+/*titulo de la seccion beneficios */
+.beneficios-detallados h2 {
+  
+  text-align: center; 
+  font-size: 36px; 
+  font-weight: 600; 
+  margin-bottom: 40px; 
+  color: #8d4b6f; 
+}
+
+/*enumeracion de beneficios */
+.beneficios-detallados ol {
+  
+  padding-left: 20px; 
+  line-height: 1.8; 
+}
+
+/* items de la lista */
+.beneficios-detallados li {
+  
+  margin-bottom: 20px; 
+  font-size: 18px; 
+  color: #8d4b6f; 
+}

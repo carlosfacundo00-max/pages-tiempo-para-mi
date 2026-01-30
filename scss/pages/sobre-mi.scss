@@ -1,0 +1,122 @@
+/* =================================== Pages Sobre mí ============================== */
+
+/* ===== Main general ===== */
+.main-sobre-mi {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.portada-sobre-mi {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  margin-bottom: 60px;
+
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 20px;
+}
+
+/* Imagen */
+.imagen-sobre-mi img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Texto */
+.texto-sobre-mi {
+  flex: 1;
+}
+
+.texto-sobre-mi h1 {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #8d4b6f;
+}
+
+.texto-sobre-mi p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #8d4b6f;
+  margin-bottom: 15px;
+}
+
+/* ===== Contenido inferior ===== */
+.contenido-sobre-mi {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Tarjetas */
+.tarjeta-sobre-mi {
+  width: 100%;
+  padding: 25px;
+
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 20px;
+  text-align: center;
+}
+
+.tarjeta-sobre-mi h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #8d4b6f;
+}
+
+.tarjeta-sobre-mi p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #8d4b6f;
+  margin-bottom: 15px;
+}
+
+/* Lista */
+.tarjeta-sobre-mi ul {
+  list-style: disc;
+  padding-left: 40px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.tarjeta-sobre-mi li {
+  font-size: 16px;
+  color: #8d4b6f;
+  margin-bottom: 8px;
+}
+
+/* Consejito */
+.consejo {
+  font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .portada-sobre-mi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagen-sobre-mi img {
+    max-width: 100%;
+  }
+
+  .texto-sobre-mi h1 {
+    font-size: 34px;
+  }
+
+  .tarjeta-sobre-mi h2 {
+    font-size: 28px;
+  }
+}

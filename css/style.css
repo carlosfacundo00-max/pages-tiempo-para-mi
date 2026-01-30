@@ -1,23 +1,22 @@
+@charset "UTF-8";
 /* reseteo general */
-
 * {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== estilos generales ===== */
-
 /* ===== estilos de body ===== */
 body {
-  background-image: url(../img/fondo.jpg); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; 
-  color: #9c5b7b; 
-  min-height: 100vh; 
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #9c5b7b;
+  min-height: 100vh;
 }
 
 /* Encabezados y párrafos */
@@ -25,85 +24,83 @@ h1,
 h2,
 h3,
 h4 {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 h1,
 h2 {
-  line-height: 1.25; 
+  line-height: 1.25;
 }
 
 p {
-  line-height: 1.7; 
+  line-height: 1.7;
 }
 
-/* ===== estilos de header =====*/
+main {
+  /* contenedor <main> – efecto vidrio */
+  background-color: rgba(255, 255, 255, 0.3); /* Blanco con transparencia - Permite ver el fondo de atrás - Intensidad justa (0.3 = suave) */
+  backdrop-filter: blur(6px); /* Difumina lo que está detrás del <main> - 6px = desenfoque equilibrado */
+  -webkit-backdrop-filter: blur(6px); /* Difumina lo que está detrás del <main> - 6px = desenfoque equilibrado */
+  padding: 20px 40px;
+  margin: 0 auto;
+  border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
+}
 
+/* ================================= estilos de header ======================*/
 /* general */
 header {
   display: flex; /* layout flexible */
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 20px 50px; 
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); 
-  backdrop-filter: blur(
-    8px
-  ); 
-  -webkit-backdrop-filter: blur(
-    8px
-  ); 
-  border-radius: 10px; 
-  position: relative; 
-  z-index: 10; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
 }
 
 /* logo */
 .logo {
-  margin-left: 50px; 
-  display: flex; 
-  align-items: center; 
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
 }
 
 header img {
-  width: 50%; 
+  width: 50%;
 }
-
-
 
 /* menu */
 header nav ul {
-  display: flex; 
-  list-style: none; 
-  gap: 60px; 
+  display: flex;
+  list-style: none;
+  gap: 60px;
 }
 
 header nav ul li a {
-  text-decoration: none; 
-  color: #ca4c99; 
-  font-weight: 600; 
+  text-decoration: none;
+  color: #ca4c99;
+  font-weight: 600;
 }
 
 /* menú normal - desktop y tablet */
 .navbar .navbar-nav .nav-link {
-  font-weight: 600; 
-  color: #9c5b7b; 
-  letter-spacing: 0.5px; 
+  font-weight: 600;
+  color: #9c5b7b;
+  letter-spacing: 0.5px;
 }
 
 /* menu clickeable */
 header nav ul li a {
-  position: relative; 
-  padding-bottom: 5px; 
-  transition: color 0.3s ease; 
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #8d4b6f; 
+  color: #8d4b6f;
 }
 
 .navbar .navbar-nav .nav-link:hover {
@@ -112,115 +109,102 @@ header nav ul li a:hover {
 
 /* subrayado animado */
 header nav ul li a::after {
-  
-  content: ""; 
-  position: absolute; 
-  left: 0; 
-  bottom: 0; 
-  width: 0%; 
-  height: 2px; 
-  background-color: #8d4b6f; 
-  transition: width 0.3s ease; 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #8d4b6f;
+  transition: width 0.3s ease;
 }
 
 /* efecto de linea */
 header nav ul li a:hover::after {
-  width: 100%;  
+  width: 100%;
 }
 
 /* Cursor tipo enlace */
 header nav ul li a {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 /* Accesibilidad: foco con teclado */
 header nav ul li a:focus-visible {
-  
-  outline: 2px solid #8d4b6f; 
-  outline-offset: 4px; 
+  outline: 2px solid #8d4b6f;
+  outline-offset: 4px;
 }
 
 /* ===== franja violeta redes y contacto =====*/
 .franja-violeta {
-  
-  width: 100%; 
-  height: 40px; 
-  background-color: rgba(
-    141,
-    75,
-    111,
-    0.8
-  ); 
-  backdrop-filter: blur( 4px); 
+  width: 100%;
+  height: 40px;
+  background-color: rgba(141, 75, 111, 0.8);
+  backdrop-filter: blur(4px);
 }
 
 /* contenido general en franja violeta */
 .franja-contenido {
-  
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  height: 100%; 
-  padding-right: 6%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-right: 6%;
 }
 
 /* redes en franja violeta */
 .redes {
-  
-  display: flex; 
-  gap: 50px; 
-  align-items: center; 
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 /* imagenes en franja violeta */
 .franja-violeta img {
-  
-  width: 28px; 
-  height: 28px; 
-  cursor: pointer; 
-  display: block; 
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: block;
 }
 
 /* telefono */
 .telefono {
   /* Agrupa ícono + número */
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .telefono a {
   /* Enlace del teléfono */
-  color: #ffffff; 
-  text-decoration: none; 
-  font-weight: 600; 
-  font-size: 14px; 
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /* ===== interaccion y clickeabilidad ===== */
-
 /* Quitar estilos de link y hacerlos flex */
 .redes a {
-  
   display: flex;
   align-items: center;
 }
 
 /* Hover para íconos de redes */
 .redes a:hover img {
-  transform: scale(1.15); 
-  opacity: 0.85; 
+  transform: scale(1.15);
+  opacity: 0.85;
 }
 
 /* Transición suave */
 .franja-violeta img {
-  transition: transform 0.3s ease, opacity 0.3s ease; 
-  cursor: pointer; 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
 }
 
 /* Teléfono clickeable con feedback */
 .telefono a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 /* Accesibilidad: foco visible con teclado */
@@ -236,411 +220,131 @@ header nav ul li a:focus-visible {
   padding-left: 90px; /* coincide visualmente con el logo */
 }
 
-
-
-
-/* ===== estilos de main ===== */
-
-main {
-  /* contenedor <main> – efecto vidrio */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.3
-  ); /* Blanco con transparencia - Permite ver el fondo de atrás - Intensidad justa (0.3 = suave) */
-  backdrop-filter: blur(
-    6px
-  ); /* Difumina lo que está detrás del <main> - 6px = desenfoque equilibrado */
-  -webkit-backdrop-filter: blur(
-    6px
-  ); /* Difumina lo que está detrás del <main> - 6px = desenfoque equilibrado */
-  padding: 20px 40px; 
-  margin: 0 auto; 
-  border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
-}
-
+/* =================================== Pages Inicio ============================== */
 /*===== portada inicio =====*/
 .portada {
-  height: 400px; 
-  background-image: url("../img/portada.jpg"); 
+  height: 400px;
+  background-image: url("../img/portada.jpg");
   background-size: cover; /* La imagen cubre toda la portada sin deformarse */
   background-position: center; /* Mantiene el foco centrado */
-  display: flex; 
-  align-items: flex-start; 
-  justify-content: flex-start; 
-  padding: 30px; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px;
   border-radius: 15px; /* Bordes redondeados - Esquinas suaves*/
 }
 
 /* en portada – texto sobre imagen */
 .portada h1 {
-  
   background-color: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
-  backdrop-filter: blur(
-    4px
-  ); /* Desenfoque del fondo - Difumina lo que está detrás del texto */
-  padding: 10px 20px; 
+  backdrop-filter: blur(4px); /* Desenfoque del fondo - Difumina lo que está detrás del texto */
+  padding: 10px 20px;
   border-radius: 5px; /* Bordes redondeados - Esquinas suaves */
-  font-size: 38px; 
-  font-weight: 200; 
-  letter-spacing: 1.5px; 
+  font-size: 38px;
+  font-weight: 200;
+  letter-spacing: 1.5px;
 }
 
 /*===== presentacion =====*/
 .presentacion {
-  
-  text-align: center; 
-  padding: 20px 20px 30px; 
-  line-height: 1.5; 
+  text-align: center;
+  padding: 20px 20px 30px;
+  line-height: 1.5;
 }
 
 /* estilos al titulo de portada*/
 .titulo-portada {
-  
-  font-size: 40px; 
-  font-weight: 200; 
-  margin-bottom: 5px; 
-  letter-spacing: 1.5px; 
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 5px;
+  letter-spacing: 1.5px;
 }
 
 /* estilos al subtitulo de portada */
 .subtitulo-portada {
-  
-  font-size: 32px; 
-  font-weight: 200; 
-  line-height: 1.4; 
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
-
 /*===== masoterapia =====*/
-
 /*  estilos para seccion masoterapia */
 .masoterapia {
-  
-  max-width: 800px; 
-  margin: 0 auto; 
-  padding: 40px 20px; 
-  text-align: center; 
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* Fondo translúcido - Mantiene el fondo visible */
-  backdrop-filter: blur(
-    6px
-  ); /* Desenfoque del fondo - Difumina el fondo detrás del bloque */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo translúcido - Mantiene el fondo visible */
+  backdrop-filter: blur(6px); /* Desenfoque del fondo - Difumina el fondo detrás del bloque */
   border-radius: 15px; /* Bordes redondeados - Esquinas suaves */
 }
 
 /* ===== tarjetas =====*/
 /* sección de tarjetas responsive */
 .tarjetas {
-  
-  display: flex; 
-  gap: 30px; 
-  padding: 25px 15px; 
-  justify-content: center; 
-  flex-wrap: wrap; 
+  display: flex;
+  gap: 30px;
+  padding: 25px 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* define cada tarjeta individual */
 .tarjeta {
-  
-  width: 280px; 
-  text-align: center; 
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); 
-  backdrop-filter: blur(
-    6px
-  ); 
-  border-radius: 15px; 
-  padding: 15px; 
+  width: 280px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 15px;
 }
 
 /* cada imagen dentro de su tarjeta individual */
 .tarjeta img {
-  
-  width: 100%; 
-  border-radius: 5px; 
-  margin-bottom: 15px; 
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 /*texto de las tarjetas */
 .tarjeta p {
-  
-  line-height: 1.6; 
+  line-height: 1.6;
 }
-
 
 /*seccion de beneficios */
 .beneficios-detallados {
-  
   background-color: rgba(255, 255, 255, 0.5); /*fondo translucido */
-  backdrop-filter: blur(
-    6px
-  ); /* Desenfoque del fondo - Difumina lo que hay detrás del bloque */
-  border-radius: 15px; 
-  padding: 60px 20px; 
-  max-width: 900px; 
-  margin: 0 auto 50px; 
-  text-align: left; 
+  backdrop-filter: blur(6px); /* Desenfoque del fondo - Difumina lo que hay detrás del bloque */
+  border-radius: 15px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: left;
 }
 
 /*titulo de la seccion beneficios */
 .beneficios-detallados h2 {
-  
-  text-align: center; 
-  font-size: 36px; 
-  font-weight: 600; 
-  margin-bottom: 40px; 
-  color: #8d4b6f; 
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #8d4b6f;
 }
 
 /*enumeracion de beneficios */
 .beneficios-detallados ol {
-  
-  padding-left: 20px; 
-  line-height: 1.8; 
+  padding-left: 20px;
+  line-height: 1.8;
 }
 
 /* items de la lista */
 .beneficios-detallados li {
-  
-  margin-bottom: 20px; 
-  font-size: 18px; 
-  color: #8d4b6f; 
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #8d4b6f;
 }
 
-
-
-/*===== estilos de footer =====*/
-
-/*===== generales =====*/
-.footer {
-  
-  background-color: #8d4b6f; 
-  color: #f5eaf1; 
-  padding: 50px 20px 20px;  
-}
-
-/* frase titulo del footer */
-.footer-frase {
-  
-  text-align: center; 
-  margin-bottom: 40px; 
-}
-
-/* especificidad para frase titulo de footer */
-.footer-frase h3 {
-  
-  font-size: 26px; 
-  font-weight: 600; 
-}
-
-/* organizacion de columnas - grid */
-.footer-contenedor {
-  
-  max-width: 1100px; 
-  margin: 0 auto; 
-  display: grid; 
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Define 3 columnas iguales: repeat(3, ...) → crear 3 columnas - 1fr → cada columna ocupa una fracción del espacio disponible */
-  gap: 40px; /* Espacio entre columnas */
-  text-align: center; 
-}
-
-/*===== columnas */
-/* estilos a todos los <h4> dentro clase footer-col */
-.footer-col h4 {
-  margin-bottom: 15px; 
-  font-size: 20px; 
-  color: #f5eaf1; 
-}
-
-/* estilos a todos los <p> dentro clase footer-col */
-.footer-col p {
-  font-size: 16px; 
-  line-height: 1.6; 
-}
-
-
-/* efecto sobre imagenes en columnas de footer */
-.footer-col a img {
-  transition: transform 0.3s ease, opacity 0.3s ease; 
-  
-}
-
-/* :hover sobre una img dentro de un enlace (a) dentro de .footer-col */
-.footer-col a img:hover {
-  transform: scale(
-    1.15
-  ); /* Aumenta el tamaño del ícono un 15% - 
-  opacity: 0.85; /* refuerza la sensación de interacción */
-}
-
-/* iconos */
-.footer-icon {
-  width: 30px; 
-  margin-bottom: 10px;  
-}
-
-/* contacto */
-.footer-item {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 10px; 
-  text-align: center;  
-}
-
-/* telefono */
-.footer-telefono a {
-  color: #ffffff; 
-  text-decoration: none; 
-  font-weight: 600; 
-  font-size: 16px; 
-}
-
-/* subrayado cuando el usuario pasa el mouse sobre el número de teléfono */
-.footer-telefono a:hover {
-  text-decoration: underline; 
-}
-
-/* Accesibilidad */
-.footer-telefono a:focus-visible {
-  outline: 2px solid #ffffff; /* Dibuja un contorno blanco de 2px alrededor del enlace cuando recibe foco mediante teclado (Tab) */
-  outline-offset: 3px; /* Separa el contorno del borde del enlace 3px. Evita que el outline quede pegado al texto y mejora la legibilidad del foco */
-}
-
-/* redes */
-.footer-redes {
-  display: flex; 
-  justify-content: center;  
-  gap: 20px; 
-}
-
-.footer-redes img {
-  width: 36px; 
-  transition: transform 0.3s ease; 
-}
-
-.footer-redes img:hover {
-  transform: scale(
-    1.15
-  ); /* Al pasar el mouse sobre el ícono: - scale(1.15) aumenta su tamaño un 15% - clickeable */
-}
-
-/* pie inferior */
-.footer-bottom {
-  margin-top: 40px; 
-  padding-top: 15px; 
-  border-top: 1px solid rgba(245, 234, 241, 0.4); 
-  text-align: center; 
-  font-size: 14px; 
-}
-
-
-
-/* ===== responsive general ===== */
-@media (max-width: 768px) {
-  /* Media Query: - Se aplica cuando el ancho de pantalla es de 768px o menor */
-
-  /* ===== header ===== */
-  header {
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 15px 20px; /
-  }
-
-  .logo {
-    margin-left: 0; /* Elimina desplazamientos laterales del logo */
-  }
-
-  header img {
-    width: 140px; /* Reduce el tamaño del logo */
-    max-width: 100%; /* Evita que se desborde en pantallas chicas */
-  }
-
-  /* menu en fila */
-  header nav ul {
-    flex-direction: row; /* Mantiene el menú horizontal */
-    gap: 20px; /* Espacio entre los ítems del menú */
-    flex-wrap: wrap; /* Permite que bajen a otra línea si no entran */
-    justify-content: center; /* Centra el menú dentro del header */
-  }
-
-  header nav ul li a {
-    font-size: 16px; /* Reduce el tamaño de letra del menú */
-  }
-
-  /* ===== franja violeta ===== */
-  .franja-violeta {
-    height: auto; /* La altura se adapta al contenido */
-    padding: 10px 0; /* Espaciado vertical */
-  }
-
-  .franja-contenido {
-    flex-direction: column; /* Elementos uno debajo del otro */
-    gap: 10px; /* Separación entre redes y teléfono */
-    padding: 0; /* Elimina padding innecesario */
-  }
-
-  .redes {
-    justify-content: center; /* Centra los íconos de redes */
-    gap: 30px; /* Más espacio entre íconos */
-  }
-
-  .telefono {
-    justify-content: center; /* Centra icono + número */
-  }
-
-  .telefono a {
-    font-size: 14px; /* Texto más chico para mobile/tablet */
-  }
-
-
-
-  /* ===== footer ===== */
-  .footer-contenedor {
-    grid-template-columns: 1fr; /* Una sola columna (layout vertical) */
-    gap: 30px; /* Espacio entre secciones del footer */
-  }
-}
-
-
-/* Móviles chicos */
-@media (max-width: 480px) {
-  /* Media Query: - Se aplica solo en pantallas de 480px o menos */
-
-  header img {
-    width: 140px; /* Reduce el tamaño del logo para que no domine el header */
-  }
-
-  header nav ul {
-    gap: 15px; /* Disminuye el espacio entre los links del menú */
-  }
-
-  header nav ul li a {
-    font-size: 15px; /* Reduce el tamaño de letra del menú para pantallas chicas */
-  }
-}
-
-@media (max-width: 768px) {
-  /* Media Query: - Se activa cuando la pantalla mide 768px o menos */
-  .footer-contenedor {
-    grid-template-columns: 1fr; /* Cambia la grilla del footer a una sola columna: - 1fr = una columna que ocupa todo el ancho - Las 3 columnas del desktop se apilan una debajo de otra - Mejora la legibilidad y el orden en mobile/tablet */
-  }
-}
-
+/* =================================== Pages Sobre mí ============================== */
 /* ===== Main general ===== */
 .main-sobre-mi {
   max-width: 1200px;
@@ -648,17 +352,14 @@ main {
   padding: 40px 20px;
 }
 
-/* ===== Portada Sobre mí ===== */
 .portada-sobre-mi {
   display: flex;
   gap: 40px;
   padding: 40px;
   margin-bottom: 60px;
-
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   border-radius: 20px;
 }
 
@@ -701,11 +402,9 @@ main {
 .tarjeta-sobre-mi {
   width: 100%;
   padding: 25px;
-
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   border-radius: 20px;
   text-align: center;
 }
@@ -749,31 +448,26 @@ main {
     flex-direction: column;
     text-align: center;
   }
-
   .imagen-sobre-mi img {
     max-width: 100%;
   }
-
   .texto-sobre-mi h1 {
     font-size: 34px;
   }
-
   .tarjeta-sobre-mi h2 {
     font-size: 28px;
   }
 }
-
+/* ============================= Pages Servicios ======================= */
 /*===== titulos y subtitulos - servicios =====*/
 .servicios-titulo {
-  
-  text-align: center; 
-  margin-bottom: 10px; 
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .servicios-titulo h3 {
-  
-  font-size: 26px; 
-  font-weight: 600; 
+  font-size: 26px;
+  font-weight: 600;
 }
 
 /* ===== Ajustes carousel servicios ===== */
@@ -786,15 +480,12 @@ main {
 }
 
 /* ===== tablet: tarjeta +20% ===== */
-
 @media (min-width: 768px) and (max-width: 991px) {
   .carousel .tarjeta {
     transform: scale(1.15);
   }
 }
-
 /* ===== botones carousel ===== */
-
 .carousel-control-prev,
 .carousel-control-next {
   width: 50px;
@@ -822,17 +513,16 @@ main {
   height: 20px;
 }
 
+/* =============================== Pages Contacto ============================== */
 /*===== titulos y subtitulos - contacto =====*/
 .contacto-titulo {
-  
-  text-align: center; 
-  margin-bottom: 10px; 
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .contacto-titulo h3 {
-  
-  font-size: 26px; 
-  font-weight: 600; 
+  font-size: 26px;
+  font-weight: 600;
 }
 
 /*===== portada - contacto =====*/
@@ -841,11 +531,9 @@ main {
   gap: 40px;
   padding: 40px;
   margin-bottom: 60px;
-
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   border-radius: 20px;
 }
 
@@ -879,16 +567,16 @@ main {
 /* telefono - contacto */
 .contacto-telefono {
   /* Agrupa ícono + número */
-  align-items: center; 
-  gap: 10px; 
+  align-items: center;
+  gap: 10px;
 }
 
 .contacto-telefono a {
   /* Enlace del teléfono */
-  color: #8d4b6f; 
-  text-decoration: none; 
-  font-weight: 600; 
-  font-size: 25px; 
+  color: #8d4b6f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 /* ===== Responsive ===== */
@@ -897,16 +585,201 @@ main {
     flex-direction: column;
     text-align: center;
   }
-
   .imagen-contacto img {
     max-width: 100%;
   }
-
   .texto-contacto h1 {
     font-size: 24px;
   }
-
   .texto-contacto p {
     font-size: 14px;
   }
 }
+/*======================================== estilos de footer =============================0=====*/
+/*===== generales =====*/
+.footer {
+  background-color: #8d4b6f;
+  color: #f5eaf1;
+  padding: 50px 20px 20px;
+}
+
+/* frase titulo del footer */
+.footer-frase {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* especificidad para frase titulo de footer */
+.footer-frase h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* organizacion de columnas - grid */
+.footer-contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define 3 columnas iguales: repeat(3, ...) → crear 3 columnas - 1fr → cada columna ocupa una fracción del espacio disponible */
+  gap: 40px; /* Espacio entre columnas */
+  text-align: center;
+}
+
+/*===== columnas */
+/* estilos a todos los <h4> dentro clase footer-col */
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #f5eaf1;
+}
+
+/* estilos a todos los <p> dentro clase footer-col */
+.footer-col p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* efecto sobre imagenes en columnas de footer */
+.footer-col a img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* :hover sobre una img dentro de un enlace (a) dentro de .footer-col */
+.footer-col a img:hover {
+  transform: scale(1.15); /* Aumenta el tamaño del ícono un 15% - 
+opacity: 0.85; /* refuerza la sensación de interacción */
+}
+
+/* iconos */
+.footer-icon {
+  width: 30px;
+  margin-bottom: 10px;
+}
+
+/* contacto */
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* telefono */
+.footer-telefono a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* subrayado cuando el usuario pasa el mouse sobre el número de teléfono */
+.footer-telefono a:hover {
+  text-decoration: underline;
+}
+
+/* Accesibilidad */
+.footer-telefono a:focus-visible {
+  outline: 2px solid #ffffff; /* Dibuja un contorno blanco de 2px alrededor del enlace cuando recibe foco mediante teclado (Tab) */
+  outline-offset: 3px; /* Separa el contorno del borde del enlace 3px. Evita que el outline quede pegado al texto y mejora la legibilidad del foco */
+}
+
+/* redes */
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-redes img {
+  width: 36px;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.15); /* Al pasar el mouse sobre el ícono: - scale(1.15) aumenta su tamaño un 15% - clickeable */
+}
+
+/* pie inferior */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(245, 234, 241, 0.4);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== responsive general ===== */
+@media (max-width: 768px) {
+  /* Media Query: - Se aplica cuando el ancho de pantalla es de 768px o menor */
+  /* ===== header ===== */
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+  .logo {
+    margin-left: 0; /* Elimina desplazamientos laterales del logo */
+  }
+  header img {
+    width: 140px; /* Reduce el tamaño del logo */
+    max-width: 100%; /* Evita que se desborde en pantallas chicas */
+  }
+  /* menu en fila */
+  header nav ul {
+    flex-direction: row; /* Mantiene el menú horizontal */
+    gap: 20px; /* Espacio entre los ítems del menú */
+    flex-wrap: wrap; /* Permite que bajen a otra línea si no entran */
+    justify-content: center; /* Centra el menú dentro del header */
+  }
+  header nav ul li a {
+    font-size: 16px; /* Reduce el tamaño de letra del menú */
+  }
+  /* ===== franja violeta ===== */
+  .franja-violeta {
+    height: auto; /* La altura se adapta al contenido */
+    padding: 10px 0; /* Espaciado vertical */
+  }
+  .franja-contenido {
+    flex-direction: column; /* Elementos uno debajo del otro */
+    gap: 10px; /* Separación entre redes y teléfono */
+    padding: 0; /* Elimina padding innecesario */
+  }
+  .redes {
+    justify-content: center; /* Centra los íconos de redes */
+    gap: 30px; /* Más espacio entre íconos */
+  }
+  .telefono {
+    justify-content: center; /* Centra icono + número */
+  }
+  .telefono a {
+    font-size: 14px; /* Texto más chico para mobile/tablet */
+  }
+  /* ===== footer ===== */
+  .footer-contenedor {
+    grid-template-columns: 1fr; /* Una sola columna (layout vertical) */
+    gap: 30px; /* Espacio entre secciones del footer */
+  }
+}
+/* Móviles chicos */
+@media (max-width: 480px) {
+  /* Media Query: - Se aplica solo en pantallas de 480px o menos */
+  header img {
+    width: 140px; /* Reduce el tamaño del logo para que no domine el header */
+  }
+  header nav ul {
+    gap: 15px; /* Disminuye el espacio entre los links del menú */
+  }
+  header nav ul li a {
+    font-size: 15px; /* Reduce el tamaño de letra del menú para pantallas chicas */
+  }
+}
+@media (max-width: 768px) {
+  /* Media Query: - Se activa cuando la pantalla mide 768px o menos */
+  .footer-contenedor {
+    grid-template-columns: 1fr; /* Cambia la grilla del footer a una sola columna: - 1fr = una columna que ocupa todo el ancho - Las 3 columnas del desktop se apilan una debajo de otra - Mejora la legibilidad y el orden en mobile/tablet */
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

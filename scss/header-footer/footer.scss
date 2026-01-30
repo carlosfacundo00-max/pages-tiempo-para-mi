@@ -1,0 +1,222 @@
+/*======================================== estilos de footer =============================0=====*/
+
+/*===== generales =====*/
+.footer {
+  
+  background-color: #8d4b6f; 
+  color: #f5eaf1; 
+  padding: 50px 20px 20px;  
+}
+
+/* frase titulo del footer */
+.footer-frase {
+  
+  text-align: center; 
+  margin-bottom: 40px; 
+}
+
+/* especificidad para frase titulo de footer */
+.footer-frase h3 {
+  
+  font-size: 26px; 
+  font-weight: 600; 
+}
+
+/* organizacion de columnas - grid */
+.footer-contenedor {
+  
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: grid; 
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Define 3 columnas iguales: repeat(3, ...) → crear 3 columnas - 1fr → cada columna ocupa una fracción del espacio disponible */
+  gap: 40px; /* Espacio entre columnas */
+  text-align: center; 
+}
+
+/*===== columnas */
+/* estilos a todos los <h4> dentro clase footer-col */
+.footer-col h4 {
+  margin-bottom: 15px; 
+  font-size: 20px; 
+  color: #f5eaf1; 
+}
+
+/* estilos a todos los <p> dentro clase footer-col */
+.footer-col p {
+  font-size: 16px; 
+  line-height: 1.6; 
+}
+
+
+/* efecto sobre imagenes en columnas de footer */
+.footer-col a img {
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  
+}
+
+/* :hover sobre una img dentro de un enlace (a) dentro de .footer-col */
+.footer-col a img:hover {
+  transform: scale(
+    1.15
+  ); /* Aumenta el tamaño del ícono un 15% - 
+  opacity: 0.85; /* refuerza la sensación de interacción */
+}
+
+/* iconos */
+.footer-icon {
+  width: 30px; 
+  margin-bottom: 10px;  
+}
+
+/* contacto */
+.footer-item {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+  text-align: center;  
+}
+
+/* telefono */
+.footer-telefono a {
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 16px; 
+}
+
+/* subrayado cuando el usuario pasa el mouse sobre el número de teléfono */
+.footer-telefono a:hover {
+  text-decoration: underline; 
+}
+
+/* Accesibilidad */
+.footer-telefono a:focus-visible {
+  outline: 2px solid #ffffff; /* Dibuja un contorno blanco de 2px alrededor del enlace cuando recibe foco mediante teclado (Tab) */
+  outline-offset: 3px; /* Separa el contorno del borde del enlace 3px. Evita que el outline quede pegado al texto y mejora la legibilidad del foco */
+}
+
+/* redes */
+.footer-redes {
+  display: flex; 
+  justify-content: center;  
+  gap: 20px; 
+}
+
+.footer-redes img {
+  width: 36px; 
+  transition: transform 0.3s ease; 
+}
+
+.footer-redes img:hover {
+  transform: scale(
+    1.15
+  ); /* Al pasar el mouse sobre el ícono: - scale(1.15) aumenta su tamaño un 15% - clickeable */
+}
+
+/* pie inferior */
+.footer-bottom {
+  margin-top: 40px; 
+  padding-top: 15px; 
+  border-top: 1px solid rgba(245, 234, 241, 0.4); 
+  text-align: center; 
+  font-size: 14px; 
+}
+
+
+
+/* ===== responsive general ===== */
+@media (max-width: 768px) {
+  /* Media Query: - Se aplica cuando el ancho de pantalla es de 768px o menor */
+
+  /* ===== header ===== */
+  header {
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px 20px; 
+  }
+
+  .logo {
+    margin-left: 0; /* Elimina desplazamientos laterales del logo */
+  }
+
+  header img {
+    width: 140px; /* Reduce el tamaño del logo */
+    max-width: 100%; /* Evita que se desborde en pantallas chicas */
+  }
+
+  /* menu en fila */
+  header nav ul {
+    flex-direction: row; /* Mantiene el menú horizontal */
+    gap: 20px; /* Espacio entre los ítems del menú */
+    flex-wrap: wrap; /* Permite que bajen a otra línea si no entran */
+    justify-content: center; /* Centra el menú dentro del header */
+  }
+
+  header nav ul li a {
+    font-size: 16px; /* Reduce el tamaño de letra del menú */
+  }
+
+  /* ===== franja violeta ===== */
+  .franja-violeta {
+    height: auto; /* La altura se adapta al contenido */
+    padding: 10px 0; /* Espaciado vertical */
+  }
+
+  .franja-contenido {
+    flex-direction: column; /* Elementos uno debajo del otro */
+    gap: 10px; /* Separación entre redes y teléfono */
+    padding: 0; /* Elimina padding innecesario */
+  }
+
+  .redes {
+    justify-content: center; /* Centra los íconos de redes */
+    gap: 30px; /* Más espacio entre íconos */
+  }
+
+  .telefono {
+    justify-content: center; /* Centra icono + número */
+  }
+
+  .telefono a {
+    font-size: 14px; /* Texto más chico para mobile/tablet */
+  }
+
+
+
+  /* ===== footer ===== */
+  .footer-contenedor {
+    grid-template-columns: 1fr; /* Una sola columna (layout vertical) */
+    gap: 30px; /* Espacio entre secciones del footer */
+  }
+}
+
+
+/* Móviles chicos */
+@media (max-width: 480px) {
+  /* Media Query: - Se aplica solo en pantallas de 480px o menos */
+
+  header img {
+    width: 140px; /* Reduce el tamaño del logo para que no domine el header */
+  }
+
+  header nav ul {
+    gap: 15px; /* Disminuye el espacio entre los links del menú */
+  }
+
+  header nav ul li a {
+    font-size: 15px; /* Reduce el tamaño de letra del menú para pantallas chicas */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Media Query: - Se activa cuando la pantalla mide 768px o menos */
+  .footer-contenedor {
+    grid-template-columns: 1fr; /* Cambia la grilla del footer a una sola columna: - 1fr = una columna que ocupa todo el ancho - Las 3 columnas del desktop se apilan una debajo de otra - Mejora la legibilidad y el orden en mobile/tablet */
+  }
+}
+
