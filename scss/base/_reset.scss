@@ -4,11 +4,14 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
+  
 }
 
 /* ===== estilos generales ===== */
 
 /* ===== estilos de body ===== */
+//import
+
 body {
   background-image: url(../img/fondo.jpg); 
   background-size: cover; 
@@ -21,15 +24,11 @@ body {
 }
 
 /* Encabezados y párrafos */
-h1,
-h2,
-h3,
-h4 {
+h1,h2,h3,h4 {
   margin-bottom: 15px; 
 }
 
-h1,
-h2 {
+h1,h2 {
   line-height: 1.25; 
 }
 

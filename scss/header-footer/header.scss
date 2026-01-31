@@ -37,17 +37,27 @@ header img {
 
 
 /* menu */
-header nav ul {
-  display: flex; 
-  list-style: none; 
-  gap: 60px; 
+// import
+// nesting
+
+header{
+  nav{
+    ul{
+      display: flex; 
+      list-style: none; 
+      gap: 60px;
+    }
+    a{
+      text-decoration: none; 
+      color: #ca4c99; 
+      font-weight: 600;
+    }
+  }
 }
 
-header nav ul li a {
-  text-decoration: none; 
-  color: #ca4c99; 
-  font-weight: 600; 
-}
+
+
+
 
 /* menú normal - desktop y tablet */
 .navbar .navbar-nav .nav-link {
