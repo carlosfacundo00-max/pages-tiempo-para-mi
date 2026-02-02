@@ -1,4 +1,5 @@
 /* =================================== Pages Sobre mí ============================== */
+@use "../utilities/mixin" as *;
 
 /* ===== Main general ===== */
 .main-sobre-mi {
@@ -66,12 +67,6 @@
 
   border-radius: 20px;
   text-align: center;
-}
-
-@mixin tarjeta-base($font-size, $color, $mg-bottom) {
-  font-size: $font-size;
-  color: $color;
-  margin-bottom: $mg-bottom;
 }
 
 .tarjeta-sobre-mi h2 {

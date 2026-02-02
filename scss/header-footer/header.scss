@@ -1,4 +1,5 @@
 /* ================================= estilos de header ======================*/
+@use "../utilities/variables" as *;
 
 /* general */
 header {
@@ -37,9 +38,8 @@ header img {
 
 
 /* menu */
-// import
+// 
 // nesting
-
 header{
   nav{
     ul{
@@ -49,7 +49,7 @@ header{
     }
     a{
       text-decoration: none; 
-      color: #ca4c99; 
+      color: $color-principal; 
       font-weight: 600;
     }
   }

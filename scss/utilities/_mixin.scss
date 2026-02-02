@@ -1,0 +1,5 @@
+@mixin tarjeta-base($font-size, $color, $mg-bottom) {
+  font-size: $font-size;
+  color: $color;
+  margin-bottom: $mg-bottom;
+}
