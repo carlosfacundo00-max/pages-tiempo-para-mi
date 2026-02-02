@@ -68,18 +68,20 @@
   text-align: center;
 }
 
+@mixin tarjeta-base($font-size, $color, $mg-bottom) {
+  font-size: $font-size;
+  color: $color;
+  margin-bottom: $mg-bottom;
+}
+
 .tarjeta-sobre-mi h2 {
-  font-size: 32px;
+  @include tarjeta-base(32px, #8d4b6f, 20px);
   font-weight: 300;
-  margin-bottom: 20px;
-  color: #8d4b6f;
 }
 
 .tarjeta-sobre-mi p {
-  font-size: 16px;
+  @include tarjeta-base(16px, #8d4b6f, 15px);
   line-height: 1.8;
-  color: #8d4b6f;
-  margin-bottom: 15px;
 }
 
 /* Lista */
@@ -91,9 +93,7 @@
 }
 
 .tarjeta-sobre-mi li {
-  font-size: 16px;
-  color: #8d4b6f;
-  margin-bottom: 8px;
+  @include tarjeta-base(16px, #8d4b6f, 8px);
 }
 
 /* Consejito */

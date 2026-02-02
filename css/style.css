@@ -406,16 +406,16 @@ header nav ul li a:focus-visible {
 
 .tarjeta-sobre-mi h2 {
   font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 20px;
   color: #8d4b6f;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
 
 .tarjeta-sobre-mi p {
   font-size: 16px;
-  line-height: 1.8;
   color: #8d4b6f;
   margin-bottom: 15px;
+  line-height: 1.8;
 }
 
 /* Lista */
