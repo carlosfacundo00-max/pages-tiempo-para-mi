@@ -207,3 +207,66 @@ header nav ul li a:focus-visible {
 .franja-contenido {
   padding-left: 90px; /* coincide visualmente con el logo */
 }
+
+/* ================= MENU HAMBURGUESA (BOOTSTRAP) ================= */
+
+@media (max-width: 767px) {
+
+  header {
+    display: flex;
+    align-items: center;        
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  /* contenedor del header */
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  /* botón hamburguesa */
+  .navbar-toggler {
+    margin-left: auto;          
+    border: none;
+    box-shadow: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  /* menú desplegado */
+  .navbar-collapse {
+    position: absolute;       
+    top: 70px;                
+    right: 15px;
+    left: auto;
+
+    width: fit-content;        
+    max-width: 220px;          
+    padding: 10px 16px;        
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  /* lista del menú */
+  .navbar-nav {
+    gap: 12px;
+  }
+
+  /* links */
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 8px 0;
+    text-align: right;
+  }
+
+  
+}
+
