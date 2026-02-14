@@ -31,31 +31,47 @@
   }
 }
 
-/* ===== botones carousel ===== */
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 50%;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: rgba(255, 255, 255, 0.65);
-}
+/* ============================= Tarjetas responsive ======================= */
 
-/* Flechas de carousel*/
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(25%);
-  width: 20px;
-  height: 20px;
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // centrar en desktop
+  gap: 20px; // espacio entre tarjetas
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px; // para desktop
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    h4 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: row; // desktop → fila
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column; // tablet + mobile → vertical
+    align-items: center;   // centrar tarjetas
+    .tarjeta {
+      max-width: 400px;
+    }
+  }
 }
